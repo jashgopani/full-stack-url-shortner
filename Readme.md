@@ -55,7 +55,7 @@ Please fill out the sections below in the _README.md_ of your project and submit
    1. I states on its page that it is better than standard UUID and it also has a collision probability calculator which I checked for 10 characters and 1M requests / hour and it was 65 days which is decent for this use case. Later I found that for 11 characters and 1M requests / hour the collision probability is 1 year which is even better.
    2. It also provides the flexibility to provide alphabet i.e. the set of characters using which the slug will be generated. I used the default alphabet.
 
-#### Design
+#### Design and Development Approach
 1. The application follows a client server architecture.
 2. The source code in both sub-projects is organised by feature i.e. `slug` is the feature and all files related to it are present in the `slug` sub-folder in src.
 3. The Backend is a REST API which provides the specified endpoints and one additional endpoint
@@ -66,6 +66,10 @@ Please fill out the sections below in the _README.md_ of your project and submit
    2. `SlugList` is a component which displays the list of all slugs and their corresponding URLs.
 6. The service abstraction in both the projects handles the responsibility of hanlding the data and interacting with the persistance layer (in this case the in-memory map in the backend and the session storage in the frontend).
 7. I've used sessionStorage instead of localStorage to avoid persisting the data across sessions as our data is anyways in-memory as of now.
+8. I've followed the following branching strategy in git
+   1. `main` - This branch contains production code. No direct commits allowed (by convention).
+   2. `release/{version}` - Created from main and only used for creating and merging child feature branches which contain code corresponding to the release version. Only this branch can be merged into `main`.
+   3. `feature/{feature-name}` - Created from release branch and used for developing a feature. Once the feature is complete, it is merged back to the release branch. Cannot merge directly in `main`.
 
 
 #### Other Notes
