@@ -47,12 +47,12 @@ Please fill out the sections below in the _README.md_ of your project and submit
 3. Instead of using the fetch API, I chose Axios for making API requests because it provides abstraction over the fetch API which makes hanlding requests easier and the code more scalable and maintainable.
 
 #### Backend
-1. For the frontend I had to decide between Node.js and Spring Boot. While node.js is a good choice for building RESTful APIs quickly, I decided to go with Spring Boot for the following reasons
+1. For the backend I had to decide between Node.js and Spring Boot. While node.js is a good choice for building RESTful APIs quickly, I decided to go with Spring Boot for the following reasons
    1. Scalability and Performance: While Node.js can handle a large number of requests through its non-blocking architecture, Spring Boot is is more scalable, performant and provides security out of the box which also makes it production ready.
    2. Developer Productivity: Spring Boot annotations are powerful and avoid boilerplate code, and Java being an Object oriented language helps to model entites and behaviours easily. While Typescript was an option that I considered but I find Java to be more robust and easier to work with.
    3. Spring boot has a slightly larger initial memory footprint compared to Node.js but I felt that the tradeoff was worth it for long term perspective.
 2. The libaray `JNanoId` was used to generate unique slugs for the shortened URLs. It is a Java implementation of NanoId library on NPM which is a tiny, secure unique string ID generator for JavaScript.
-   1. I states on its page that it is better than standard UUID and it also has a collision probability calculator which I checked for 10 characters and 1M requests / hour and it was 65 days which is decent for this use case. Later I found that for 11 characters and 1M requests / hour the collision probability is 1 year which is even better.
+   1. It claims to be better than standard UUID and it also has a collision probability calculator which I checked for 10 characters and 1M requests / hour and it was 65 days which is decent for this use case. Later I found that for 11 characters and 1M requests / hour the collision probability is 1 year which is even better.
    2. It also provides the flexibility to provide alphabet i.e. the set of characters using which the slug will be generated. I used the default alphabet.
 
 #### Design and Development Approach
