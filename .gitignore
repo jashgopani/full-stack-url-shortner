@@ -1,0 +1,52 @@
+# Backend (Spring Boot)
+Backend/target/
+Backend/.idea/
+Backend/.project
+Backend/.classpath
+Backend/.settings/
+Backend/.vscode/
+Backend/.mvn/
+Backend/mvnw
+Backend/mvnw.cmd
+Backend/.env
+Backend/*.iml
+Backend/bin
+Backend/.factorypath
+Backend/.sts4-cache
+Backend/.springBeans
+Backend/HELP.md
+Backend/.gradle
+Backend/build/
+Backend/!gradle/wrapper/gradle-wrapper.jar
+Backend/!**/src/main/**/build/
+Backend/!**/src/test/**/build/
+
+
+# Frontend (React.js)
+frontend/node_modules/
+frontend/.env
+frontend/.next/
+frontend/.nuxt/
+frontend/dist/
+frontend/build/
+frontend/.idea/
+frontend/.vscode/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
