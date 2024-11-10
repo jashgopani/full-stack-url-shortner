@@ -37,7 +37,7 @@ public class SlugController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<?> shortenURL(@RequestParam String url) {
+    public ResponseEntity<?> shortenURL(@RequestParam("url") String url) {
         try {
             Slug slug = slugService.generateSlug(url);
             return ResponseEntity.status(HttpStatus.CREATED).body(slug);
